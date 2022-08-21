@@ -12,11 +12,12 @@ Exemplo de implementação mínima de internacionalização de projetos em Java 
 
 ## Execução
 - A partir da configuração anterior, execute o pacote.jar via linha de comando enviando como parâmetro os valores para o idioma e país, exemplos:
-```
+
 ```console
 foo@bar:~$ java -jar pacote.jar pt BR
 Nome
 foo@bar:~$ java -jar pacote.jar en US
 Name
 ```
+
 - Inclua novos arquivos de idiomas seguindo o padrão proposto. Altere a linha de comando de acordo. Poderá gerar um atalho para o paocte.jar repassando como parâmetro aqueles valores de idioma e país.
