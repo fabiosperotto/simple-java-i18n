@@ -11,7 +11,8 @@ Exemplo de implementação mínima de internacionalização de projetos em Java 
 - Ao gerar o pacote.jar com o build do Maven, copie o pacote.jar gerado em /target e crie um diretório separado (/sistema por exemplo). Neste novo diretório inclua o pacote.jar e o diretório de /idiomas.
 
 ## Execução
-- A partir da configuração anterior, execute o pacote.jar via linha de comando enviando como parâmetro os valores para o idioma e país, exemplos:
+- Poderá executar a aplicação a partir de qualquer modo (pelo executável) que a mesma se adequará ao idioma atual das configurações do Sistema Operacional. A alternativa é utilizar a linha de comando para gerar as configurações de forma mais assertiva (siga lendo abaixo).
+- A partir da configuração descrita na seção anterior, execute o pacote.jar via linha de comando enviando como parâmetro os valores para o idioma e país, exemplos:
 
 ```console
 foo@bar:~$ java -jar pacote.jar pt BR
