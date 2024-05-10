@@ -26,11 +26,29 @@ public class Principal {
             pais = args[1]; //pais enviado por cli
         }
         
-        //avaliando se temos traducao disponivel
-        ArrayList<String> traducoesDisponiveis = new ArrayList<String>();
-        traducoesDisponiveis.add("pt");
-        traducoesDisponiveis.add("en");
-        if(!traducoesDisponiveis.contains(idioma)){ //nao existe traducao disponivel, usar default:
+        //avaliando se temos traducao disponivel (exemplo 1)
+        // ArrayList<String> traducoesDisponiveis = new ArrayList<String>();
+        // traducoesDisponiveis.add("pt");
+        // traducoesDisponiveis.add("en");
+        // if(!traducoesDisponiveis.contains(idioma)){ //nao existe traducao disponivel, usar default:
+        //     idioma = "pt";
+        //     pais = "BR";
+        // }
+
+        //avaliando se no diretorio de idiomas da raiz do executavel possui o idioma
+        String busca = idioma + "_" + pais;
+        boolean temTraducao = false;
+        File diretorio = new File("idiomas");
+        File[] listagemDiretorio = diretorio.listFiles();
+        if (listagemDiretorio != null) { //lista de arquivos encontrados
+            for (File arquivo : listagemDiretorio) {
+                if(arquivo.getName().contains(busca)){
+                    temTraducao = true;
+                    break;
+                } 
+            }
+        }
+        if(!temTraducao){ //se nao encontrou entao usa uma traducao padrao
             idioma = "pt";
             pais = "BR";
         }
